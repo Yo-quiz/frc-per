@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo-quiz Tribu Maléfica (Español)</title>
+<div style="position: absolute; top: 10px; right: 10px; font-size: 14px; z-index: 1000;">
+    <p style="margin: 0;">
+        Hecho por 
+        <a href="https://x.com/salty_baconV2" target="_blank" style="text-decoration: none; color: #007bff;">
+            @salty_baconV2
+        </a>
+    </p>
+</div>
+
+    <style>
+        body {
+    background: linear-gradient(to bottom, #444444, #111111);
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+       .quiz-title h1 {
+    text-align: center;
+    color: white;
+    padding: 1px;
+    font-size: 50px;
+}
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .yo-kai-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .yo-kai-icons img {
+            width: 50px;
+            height: 50px;
+            margin: 3px;
+            transition: transform 0.3s ease; /* Transición suave */
+        }
+
+       input {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    border: 2px solid #666;
+    border-radius: 8px;
+}
+        .info p {
+            color: white;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        /* Animación de aparición y reducción de tamaño */
+        @keyframes appearAndShrink {
+            0% {
+                transform: scale(1.5); /* Más grande */
+                opacity: 1; /* Totalmente visible */
+            }
+            100% {
+                transform: scale(1); /* Tamaño normal */
+                opacity: 1; /* Mantener visibilidad */
+            }
+        }
+
+        /* Clase para activar la animación */
+        .yokai-unlocked {
+            animation: appearAndShrink 0.5s ease-in-out; /* Duración y suavidad */
+            z-index: 10; /* Asegura que esté encima durante la animación */
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-title">
+        <h1>Yo-quiz Tribu Maléfica (3DS-Switch)</h1>
+    </div>
+    <div class="container">
+        <div class="yo-kai-icons">
+<div style="
+    width: calc(100% - 40px);
+    margin: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 12px 16px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    clip-path: polygon(
+        20px 0,
+        100% 0,
+        100% calc(100% - 20px),
+        calc(100% - 20px) 100%,
+        0 100%,
+        0 20px
+    );
+">
+    Yo-kai Watch 2
+</div>
+            <img id="yo-kai1" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai2" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai3" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai4" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai5" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai6" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai7" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai8" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai9" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai10" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai11" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai12" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai13" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai14" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai15" src="no-kai.png" alt="no-kai">
+<div style="
+    width: calc(100% - 40px);
+    margin: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 12px 16px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    clip-path: polygon(
+        20px 0,
+        100% 0,
+        100% calc(100% - 20px),
+        calc(100% - 20px) 100%,
+        0 100%,
+        0 20px
+    );
+">
+    Yo-kai Watch 4
+</div>            
+            <img id="yo-kai16" src="no-kai.png" alt="no-kai">
+    <div style="
+    width: calc(100% - 40px);
+    margin: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 12px 16px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    clip-path: polygon(
+        20px 0,
+        100% 0,
+        100% calc(100% - 20px),
+        calc(100% - 20px) 100%,
+        0 100%,
+        0 20px
+    );
+">
+    PNJs
+</div>        
+            <img id="yo-kai17" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai18" src="no-kai.png" alt="no-kai">
+            <img id="yo-kai19" src="no-kai.png" alt="no-kai">
+           
+ </div>
+
+        <input type="text" id="answer-input" placeholder="Escribe el nombre del Yo-kai.">
+        <div class="info">
+            <p>Tiempo: <span id="time">00:00:00</span></p>
+            <p>Puntuación: <span id="score">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
